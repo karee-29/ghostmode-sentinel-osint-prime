@@ -19,6 +19,7 @@ import {
   Eye,
   FileJson,
   FileText,
+  Filter,
   Fingerprint,
   FolderKanban,
   GitBranch,
