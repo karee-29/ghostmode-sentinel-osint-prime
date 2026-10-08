@@ -1,0 +1,51 @@
+GHOSTMODE SENTINEL — WINDOWS QUICK START
+
+IMPORTANT: This CLEAN-FINAL package is the Sentinel UI. If your browser still shows the old "Privacy workspace / Overview / Timeline" screen, you are running an OLD Vite process or the wrong folder.
+
+1) CLOSE every GhostMode/Vite browser tab.
+2) Open CMD.
+3) Stop old Node/Vite processes:
+   taskkill /F /IM node.exe
+4) Go to this project's frontend:
+   cd /d D:\Projects\TECH\GhostMode-Sentinel-OSINT-CLEAN-FINAL\frontend
+5) Install frontend dependencies:
+   npm install
+6) Start frontend:
+   npm run dev -- --host localhost --port 5173
+7) Open exactly:
+   http://localhost:5173/
+
+The correct UI MUST show:
+   GHOSTMODE
+   SENTINEL / OSINT
+   Command Center
+   Investigations
+   Collection Studio
+   Evidence Ledger
+   Intelligence Graph
+   Timeline & Diff
+   Risk & Exposure
+   Reports & Export
+
+If you see "Overview / Timeline / Identity graph / Exposure map", STOP — that is the old GhostMode app, not Sentinel.
+
+BACKEND:
+Open a second CMD:
+   cd /d D:\Projects\TECH\GhostMode-Sentinel-OSINT-CLEAN-FINAL
+   .venv\Scripts\activate
+   python -m uvicorn backend.app.main:app --reload --port 8000
+
+If you need a fresh venv:
+   py -3.14 -m venv .venv
+   .venv\Scripts\activate
+   python -m pip install --upgrade pip
+   pip install -r backend\requirements.txt
+
+REAL PUBLIC DEMO:
+Frontend -> Collection Studio
+Target: github.com
+Profile: Passive Domain
+Click: Run passive collection
+
+This collects only public DNS / certificate / RDAP / HTTP metadata.
+No login, password, exploitation, private-network access or account takeover is used.

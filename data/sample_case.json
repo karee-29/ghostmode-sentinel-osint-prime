@@ -1,0 +1,1 @@
+{"case_id":"CASE-DEMO-001","name":"Demo Exposure Review","authorized_scope":["example.org"],"hypothesis":"Public infrastructure metadata may reveal unnecessary exposure.","findings":[{"entity_type":"subdomain","value":"api.example.org","source":"crt.sh","confidence":0.95,"severity":"medium","summary":"Certificate Transparency observation."}]}
